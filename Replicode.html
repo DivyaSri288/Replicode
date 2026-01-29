@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Replicode - Build. Learn. Replicate</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-top: #ffffff;
+            --bg-bottom: #fafafa;
+            --text-main: #1a1a1a;
+            --text-sub: #666666;
+            --accent: #007bff;
+            --box-bg: #fafafa;
+        }
+
+        [data-theme="dark"] {
+            --bg-top: #0f172a;
+            --bg-bottom: #1e293b;
+            --text-main: #f8fafc;
+            --text-sub: #94a3b8;
+            --box-bg: #1e293b;
+        }
+
+        body {
+            font-family: 'Inter', 'Segoe UI', sans-serif;
+            margin: 0;
+            background-color: var(--bg-bottom);
+            color: var(--text-main);
+            transition: 0.3s ease;
+        }
+
+        /* --- Super Slim Navigation Bar --- */
+        header {
+            background-color: var(--bg-top);
+            padding: 10px 0; /* Padding inka thaggincha */
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo { 
+            font-size: 20px; /* Logo size thaggincha slim look kosam */
+            font-weight: 800; 
+            letter-spacing: -0.5px; 
+        }
+
+        nav { display: flex; align-items: center; gap: 20px; }
+        nav ul { list-style: none; display: flex; gap: 20px; margin: 0; padding: 0; }
+        nav a { 
+            text-decoration: none; 
+            color: var(--text-main); 
+            font-size: 13px; /* Font size slim ga uncha */
+            font-weight: 600; 
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            opacity: 0.8;
+            transition: 0.3s;
+        }
+        nav a:hover { opacity: 1; color: var(--accent); }
+
+        #theme-toggle {
+            background: rgba(0,0,0,0.05); 
+            border: none; 
+            color: var(--text-main);
+            padding: 4px 10px; 
+            border-radius: 15px; 
+            cursor: pointer;
+            font-size: 12px;
+        }
+
+        /* Hero Part */
+        .top-section { background-color: var(--bg-top); padding: 60px 0; text-align: center; }
+        .hero h1 { font-size: 48px; font-weight: 900; margin-bottom: 12px; }
+        .hero p { font-size: 18px; color: var(--text-sub); margin-bottom: 35px; }
+
+        .buttons { display: flex; justify-content: center; gap: 25px; }
+        .btn {
+            padding: 10px 24px;
+            font-size: 15px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: 0.3s;
+        }
+
+        .btn-github { background: #000; color: #fff; }
+        .btn-learn { border: 2px solid var(--accent); color: var(--accent); }
+
+        /* Features */
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            padding: 80px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+
+        .feature-box {
+            background-color: var(--box-bg);
+            width: 250px;
+            padding: 30px 20px;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid rgba(0,0,0,0.03);
+            transition: 0.3s ease;
+        }
+
+        .feature-box:hover {
+            transform: translateY(-8px);
+            background: var(--bg-top);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+
+        .icon { font-size: 35px; margin-bottom: 15px; display: block; }
+        footer { background: #000; color: #fff; text-align: center; padding: 25px 0; font-size: 13px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo">Replicode</div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <button id="theme-toggle"><i class="fas fa-moon"></i></button>
+            </nav>
+        </div>
+    </header>
+
+    <div class="top-section">
+        <section class="hero">
+            <h1>Build. Learn. Replicate.</h1>
+            <p>Practice coding by building real projects</p>
+            <div class="buttons">
+                <a href="https://github.com/DivyaSri288/Replicode" class="btn btn-github"><i class="fab fa-github" style="font-size: 22px;"></i> View on Github</a>
+                <a href="#" class="btn btn-learn">Learn More</a>
+            </div>
+        </section>
+    </div>
+
+    <div class="features">
+        <div class="feature-box">
+            <span class="icon">💡</span>
+            <h3>Learn by Doing</h3>
+            <p>Improve your coding skills through hands-on projects.</p>
+        </div>
+        <div class="feature-box">
+            <span class="icon">💻</span>
+            <h3>Project Examples</h3>
+            <p>Study real world architectures and modern workflows.</p>
+        </div>
+        <div class="feature-box">
+            <span class="icon">⚙️</span>
+            <h3>Easy to Follow</h3>
+            <p>Step-by-step guides to replicate and learn fast.</p>
+        </div>
+    </div>
+
+    <footer>&copy; 2026 Replicode</footer>
+
+    <script>
+        const btn = document.getElementById('theme-toggle');
+        btn.addEventListener('click', () => {
+            const theme = document.documentElement.getAttribute('data-theme');
+            const isDark = theme === 'dark';
+            document.documentElement.setAttribute('data-theme', isDark ? 'light' : 'dark');
+            btn.innerHTML = isDark ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>';
+        });
+    </script>
+</body>
+</html>
